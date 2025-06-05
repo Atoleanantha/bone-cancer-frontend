@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import ProjectInfo from './ProjectInfo';
-import IntroCard from './Introcard';
+import IntroCard from './IntroCard';
 
 const About = () => {
     return (
