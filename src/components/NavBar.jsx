@@ -59,6 +59,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import '../App.css'
 const NavBar = () => {
+   const isLoggedIn = localStorage.getItem("isLogin")
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -71,11 +72,11 @@ const NavBar = () => {
       className="w-full bg-gray-900 text-white px-6 py-3 flex items-center justify-between shadow-md"
     >
       {/* Logo */}
-      <div className="text-xl font-bold">🧬 BoneDetect</div>
+      <div className="text-xl font-bold">🧬 Bone Cancer Prectiction</div>
 
       {/* Navigation links */}
       <div className="flex space-x-4 items-center">
-        <Link to="/" className="hover:text-blue-400 transition">
+        <Link to={isLoggedIn ?"/predict" : "/"} className="hover:text-blue-400 transition">
           Home
         </Link>
         <Link to="/about" className="hover:text-blue-400 transition">

@@ -17,7 +17,7 @@ function App() {
       <NavBar />
 
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={isLoggedIn ? <Predict/>:<Login />} />
           <Route path="/predict" element={ <Predict />} />
           <Route path="/about" element={<About />} />
         </Routes>
